@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/reactjs/react-rails.git
-  revision: b4051e111aa8ec3e68b8924e1f13598f18b475c6
+  remote: git://github.com/digitalcuisine/react-rails.git
+  revision: d4bed8e07e3a8dc4c30cb0703460b268ac5a6501
   specs:
     react-rails (1.0.0.pre)
       connection_pool
@@ -38,6 +38,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    browserify-rails (0.4.1)
+      sprockets (~> 2.0)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -130,6 +132,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  browserify-rails (~> 0.3)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails

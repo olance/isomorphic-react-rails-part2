@@ -1,0 +1,11 @@
+{
+    "name": "isomorphic-react-rails",
+    "devDependencies" : {
+        "browserify": "~> 4.1",
+        "reactify": "~> 0.14"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">= 0.10"
+    }
+}
