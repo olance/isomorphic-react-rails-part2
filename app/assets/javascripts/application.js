@@ -16,5 +16,8 @@
 //= require react
 //= require react_ujs
 
+
+var Routes = require('./routes');
+
 // Pull in our top-level components in the main javascript entrey point
 require('./components');

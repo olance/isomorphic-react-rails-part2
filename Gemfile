@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 gem 'react-rails', '~> 1.0.0.pre', github: 'digitalcuisine/react-rails'
 gem 'browserify-rails', '~> 0.3'
+gem 'js-routes'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
