@@ -33,3 +33,5 @@ var PostContent = React.createClass({
         );
     }
 });
+
+module.exports = Post;

@@ -1,2 +1,2 @@
-// Tell react-rails where our components are
-//= require_tree ./components
+// Load our top-level components from here
+window.PostsList = require('./components/posts_list');

@@ -1,5 +1,7 @@
 /** @jsx React.DOM **/
 
+var Post = require('./post');
+
 var PostsList = React.createClass({
     getInitialState: function() {
         return { posts: this.props.initialPosts };
@@ -17,3 +19,5 @@ var PostsList = React.createClass({
         );
     }
 });
+
+module.exports = PostsList;
