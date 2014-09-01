@@ -1,5 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  ActionDispatch::Reloader.to_prepare do
+    Rails.application.reload_routes!
+    JsRoutes.assert_usable_configuration! && JsRoutes.generate!(Rails.root.join('app/assets/javascripts/routes.js'))
+  end
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

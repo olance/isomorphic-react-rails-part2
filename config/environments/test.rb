@@ -1,5 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  ActionDispatch::Reloader.to_prepare do
+    Rails.application.reload_routes!
+    JsRoutes.assert_usable_configuration! && JsRoutes.generate!(Rails.root.join('app/assets/javascripts/routes.js'))
+  end
 
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
