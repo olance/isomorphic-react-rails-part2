@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @application_state[:posts] = Post.all
   end
 
 end
