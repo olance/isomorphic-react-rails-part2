@@ -2,10 +2,13 @@
   "name": "isomorphic-react-rails",
   "devDependencies": {
     "browserify": "~> 4.1",
-    "reactify": "~> 0.14",
-    "react-router-component": "~0.20.0",
+    "coffeeify": "^0.7.0",
+    "flux": "^2.0.0",
+    "lodash": "^2.4.1",
+    "react": "~0.11.1",
     "react-async": "~1.0.1",
-    "react": "~0.11.1"
+    "react-router-component": "~0.20.0",
+    "reactify": "~> 0.14"
   },
   "license": "MIT",
   "engines": {

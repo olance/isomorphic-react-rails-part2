@@ -21,6 +21,6 @@ module IsomorphicReactjs
     # config.i18n.default_locale = :de
 
     # Use Reactify to transform JSX files to JS + treat .js.jsx files as modules
-    config.browserify_rails.commandline_options = '-t reactify --extension=".js.jsx"'
+    config.browserify_rails.commandline_options = '--insert-globals -t coffeeify --extension=".js.coffee" -t reactify --extension=".js.jsx"'
   end
 end
