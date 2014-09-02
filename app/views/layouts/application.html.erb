@@ -12,9 +12,7 @@
 </head>
 <body>
 
-<h1>My Awesome Blog!</h1>
-
-<%= yield %>
+<%= react_component('App', { initialAppState: @application_state }, { prerender: true }) %>
 
 </body>
 </html>
