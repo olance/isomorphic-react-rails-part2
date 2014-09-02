@@ -1,25 +1,30 @@
 /** @jsx React.DOM **/
 
-var Routes = require('../routes').Routes,
-    Router = require('react-router-component'),
-    Pages = Router.Pages,
-    Page = Router.Page,
+var Context = require('../lib/context'),
+    Routes = require('../routes').Routes,
+    PostStore = require('../stores/post_store'),
 
-    PostsList = require('./posts_list');
+    MainSection = require('./main_section');
 
 var App = React.createClass({
     getInitialState: function () {
         return this.props.initialAppState;
     },
 
+    componentWillMount: function() {
+        // Create new context for the app
+        this.context = new Context();
+        // Register stores on the new context
+        this.context.registerStore(new PostStore());
+        // Dispatch initial state
+        this.context.dispatchInitialState(this.state);
+    },
+
     render: function () {
         return (
             <div className="blog-app">
                 <h1>My Awesome Blog!</h1>
-                <Pages path={this.state.path}>
-                    <Page path={Routes.root_path()} handler={PostsList}
-                          posts={this.state.posts}/>
-                </Pages>
+                <MainSection context={this.context}/>
             </div>
         );
     }
