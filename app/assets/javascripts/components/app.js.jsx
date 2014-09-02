@@ -1,6 +1,11 @@
 /** @jsx React.DOM **/
 
-var PostsList = require('./posts_list');
+var Routes = require('../routes').Routes,
+    Router = require('react-router-component'),
+    Pages = Router.Pages,
+    Page = Router.Page,
+
+    PostsList = require('./posts_list');
 
 var App = React.createClass({
     getInitialState: function () {
@@ -11,7 +16,10 @@ var App = React.createClass({
         return (
             <div className="blog-app">
                 <h1>My Awesome Blog!</h1>
-                <PostsList posts={this.state.posts}/>
+                <Pages path={this.state.path}>
+                    <Page path={Routes.root_path()} handler={PostsList}
+                          posts={this.state.posts}/>
+                </Pages>
             </div>
         );
     }
